@@ -24,6 +24,7 @@ all: clean
 	$(LATEX) $(FLAGS) $(DOCname).tex; \
 	$(LATEX) $(FLAGS) $(DOCname).tex; \
 	mv $(OUT_DIR)/$(DOCname).pdf "$(OUT_DIR)/EY_Challenge_2026_Report_v$${VERSION}.pdf"; \
+	rm -f $(OUT_DIR)/*.aux $(OUT_DIR)/*.log $(OUT_DIR)/*.toc $(OUT_DIR)/*.out $(OUT_DIR)/*.fls $(OUT_DIR)/*.fdb_latexmk; \
 	echo "Build successful! Output: $(OUT_DIR)/EY_Challenge_2026_Report_v$${VERSION}.pdf"
 
 clean:
